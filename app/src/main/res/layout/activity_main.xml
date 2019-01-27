@@ -8,7 +8,7 @@
     android:layout_gravity="center"
     tools:context=".MainActivity">
 
-    <com.app.printexample.textinlineimage.TextInlineImage
+    <com.android.lib.textinlineimage.TextInlineImage
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Here is the example of center: [img src=ic_emoji/]"
@@ -17,7 +17,7 @@
         app:imageSize="24dp"
         app:imageAlignment="center"/>
 
-    <com.app.printexample.textinlineimage.TextInlineImage
+    <com.android.lib.textinlineimage.TextInlineImage
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Here is the example of baseline: [img src=ic_emoji/]"
@@ -26,7 +26,7 @@
         app:imageSize="20dp"
         app:imageAlignment="baseline"/>
 
-    <com.app.printexample.textinlineimage.TextInlineImage
+    <com.android.lib.textinlineimage.TextInlineImage
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Here is the example of bottom: [img src=ic_emoji/]"
