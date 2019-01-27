@@ -7,6 +7,5 @@
             <enum name="baseline" value="1"/>
             <enum name="bottom" value="2" />
         </attr>
-        <attr name="imageTopMargin" format="dimension" />
     </declare-styleable>
 </resources>
