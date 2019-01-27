@@ -1,27 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
     tools:context=".MainActivity">
 
     <com.app.printexample.textinlineimage.TextInlineImage
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World! [img src=cross_icon/] Hello World! [img src=cross_icon/]"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:imageSize="29dp"
-        app:imageAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Here is the example of center: [img src=ic_emoji/]"
+        android:textSize="16sp"
+        android:layout_margin="20dp"
+        app:imageSize="24dp"
+        app:imageAlignment="center"/>
 
-    <ImageView
+    <com.app.printexample.textinlineimage.TextInlineImage
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"
-        android:background="@color/colorAccent"/>
+        android:text="Here is the example of baseline: [img src=ic_emoji/]"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+        app:imageSize="20dp"
+        app:imageAlignment="baseline"/>
 
-</android.support.constraint.ConstraintLayout>
+    <com.app.printexample.textinlineimage.TextInlineImage
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Here is the example of bottom: [img src=ic_emoji/]"
+        android:textSize="25sp"
+        android:layout_margin="20dp"
+        app:imageSize="15dp"
+        app:imageAlignment="bottom"/>
+
+
+</LinearLayout>

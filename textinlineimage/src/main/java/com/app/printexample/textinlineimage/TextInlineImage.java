@@ -41,7 +41,6 @@ public class TextInlineImage extends AppCompatTextView {
             a.recycle();
         }
         setText(getText().toString());
-        Log.d(getClass().getName(), String.valueOf(imageSize));
 
     }
 
@@ -82,7 +81,6 @@ public class TextInlineImage extends AppCompatTextView {
 
                 imageDrawable.setBounds(0, 0, width, height);
                 ImageSpan imageSpan = getImageSpan(imageDrawable);
-
                 spannable.setSpan(
                         imageSpan, // Span to add
                         matcher.start(),
@@ -97,7 +95,7 @@ public class TextInlineImage extends AppCompatTextView {
     private ImageSpan getImageSpan(Drawable imageDrawable) {
         switch (imageAlignment) {
             case 0:
-                return new CenterImageSpan(imageDrawable, ImageSpan.ALIGN_BASELINE, imageSize, getTextSize());
+                return new CenterImageSpan(imageDrawable, ImageSpan.ALIGN_BASELINE, this);
 
             case 1:
                 return new ImageSpan(imageDrawable, ImageSpan.ALIGN_BASELINE);
@@ -106,7 +104,7 @@ public class TextInlineImage extends AppCompatTextView {
                 return new ImageSpan(imageDrawable, ImageSpan.ALIGN_BOTTOM);
 
             default:
-                return new CenterImageSpan(imageDrawable, ImageSpan.ALIGN_BASELINE, imageSize, getTextSize());
+                return new CenterImageSpan(imageDrawable, ImageSpan.ALIGN_BASELINE, this);
 
         }
     }

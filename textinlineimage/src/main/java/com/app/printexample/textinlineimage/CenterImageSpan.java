@@ -8,26 +8,25 @@ import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.text.style.ImageSpan;
+import android.util.Log;
 
 import java.lang.ref.WeakReference;
 
 public class CenterImageSpan  extends ImageSpan {
-    private float textSize;
     private WeakReference<Drawable> mDrawableRef;
 
     // Extra variables used to redefine the Font Metrics when an ImageSpan is added
     private int initialDescent = 0;
     private int extraSpace = 0;
-    private float imageSize;
+    private TextInlineImage textInlineImage;
 
     public CenterImageSpan(Context context, final int drawableRes) {
         super(context, drawableRes);
     }
 
-    public CenterImageSpan(Drawable drawableRes, int verticalAlignment, float imageSize, float textSize) {
+    public CenterImageSpan(Drawable drawableRes, int verticalAlignment, TextInlineImage textInlineImage) {
         super(drawableRes, verticalAlignment);
-        this.imageSize=imageSize;
-        this.textSize=textSize;
+        this.textInlineImage=textInlineImage;
     }
 
     @Override
@@ -69,7 +68,7 @@ public class CenterImageSpan  extends ImageSpan {
 //        } else{
 //            transY -= ((textSize-(imageSize/2))/2);
 //        }
-        canvas.translate(x,rect.top+((rect.height()-imageSize)/2));
+        canvas.translate(x,rect.top+((rect.height()-textInlineImage.getImageSize())/2));
         b.draw(canvas);
         canvas.restore();
     }
