@@ -3,7 +3,7 @@ A simple android library to add inline images with text in a TextView.
 
 [![](https://jitpack.io/v/princ-bhardwaj/TextInlineImage-Library.svg)](https://jitpack.io/#princ-bhardwaj/TextInlineImage-Library)
 
-# Prerequisites
+## Prerequisites
 
 Add this in your root build.gradle file (not your module build.gradle file):
   ```sh
@@ -15,7 +15,7 @@ allprojects {
 }
 ```
 
-# Prerequisites
+## Dependency
 
 Add this to your module's build.gradle file (make sure the version matches the JitPack badge above):
   ```sh
@@ -25,7 +25,7 @@ dependencies {
 }
 ```
 
-# Usage
+## Usage
 
 Use this in your layout xml:
 
@@ -42,7 +42,7 @@ Use this in your layout xml:
 Here "[img src=ic_emoji/]" will replace resource drawable named with "ic_emoji".
 
 
-# License
+## License
 
    Copyright 2019 Prince Bhardwaj
 
